@@ -5,8 +5,8 @@ HOST = "localhost"
 PORT = 4223
 UID = "abc" # Change to your UID
 
-from ip_connection import IPConnection
-from bricklet_linear_poti import LinearPoti
+from tinkerforge.ip_connection import IPConnection
+from tinkerforge.bricklet_linear_poti import LinearPoti
 
 # Callback function for position callback (parameter has range 0-100)
 def cb_position(position):
