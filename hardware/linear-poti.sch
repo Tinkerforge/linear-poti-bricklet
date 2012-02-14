@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Do 25 Aug 2011 13:35:50 CEST
+EESchema Schematic File Version 2  date Fr 30 Dez 2011 10:09:52 CET
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,8 +36,8 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "Linear Poti Bricklet"
-Date "25 aug 2011"
-Rev "1.0"
+Date "30 dec 2011"
+Rev "1.1"
 Comp "Tinkerforge GmbH"
 Comment1 "Licensed under CERN OHL v.1.1"
 Comment2 "Copyright (©) 2011, B.Nordmeyer <bastian@tinkerforge.com>"
@@ -51,11 +51,6 @@ Wire Wire Line
 	5150 3150 5150 3000
 Wire Wire Line
 	5150 3000 4900 3000
-Connection ~ 5050 4000
-Wire Wire Line
-	5050 4000 4900 4000
-Wire Wire Line
-	4900 4000 4900 4050
 Connection ~ 6050 4450
 Wire Wire Line
 	6050 4350 6050 4450
@@ -102,36 +97,15 @@ Wire Wire Line
 Wire Wire Line
 	6050 4450 6100 4450
 Wire Wire Line
-	4900 4850 4900 4550
-Wire Wire Line
 	4900 3100 5000 3100
 Wire Wire Line
 	5000 3100 5000 2800
-$Comp
-L GND #PWR01
-U 1 1 4CE52A42
-P 4900 4850
-F 0 "#PWR01" H 4900 4850 30  0001 C CNN
-F 1 "GND" H 4900 4780 30  0001 C CNN
-	1    4900 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R1
-U 1 1 4CE52A30
-P 4900 4300
-F 0 "R1" V 4980 4300 50  0000 C CNN
-F 1 "DNP" V 4900 4300 50  0000 C CNN
-F 2 "0603" H 4900 4300 60  0001 C CNN
-	1    4900 4300
-	1    0    0    -1  
-$EndComp
 NoConn ~ 6050 4550
 $Comp
-L GND #PWR02
+L GND #PWR01
 U 1 1 4CE528DC
 P 6500 4500
-F 0 "#PWR02" H 6500 4500 30  0001 C CNN
+F 0 "#PWR01" H 6500 4500 30  0001 C CNN
 F 1 "GND" H 6500 4430 30  0001 C CNN
 	1    6500 4500
 	1    0    0    -1  
@@ -201,10 +175,10 @@ F 2 "F6005N" H 7150 3150 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR02
 U 1 1 4C652DE8
 P 7500 3250
-F 0 "#PWR03" H 7500 3250 30  0001 C CNN
+F 0 "#PWR02" H 7500 3250 30  0001 C CNN
 F 1 "GND" H 7500 3180 30  0001 C CNN
 	1    7500 3250
 	1    0    0    -1  
@@ -212,10 +186,10 @@ $EndComp
 Text GLabel 6950 2800 0    60   Output ~ 0
 IN_1
 $Comp
-L VCC #PWR04
+L VCC #PWR03
 U 1 1 4C652DAA
 P 6800 3150
-F 0 "#PWR04" H 6800 3250 30  0001 C CNN
+F 0 "#PWR03" H 6800 3250 30  0001 C CNN
 F 1 "VCC" H 6800 3250 30  0000 C CNN
 	1    6800 3150
 	1    0    0    -1  
@@ -231,19 +205,19 @@ SDA
 Text GLabel 5250 3200 2    60   Output ~ 0
 SCL
 $Comp
-L VCC #PWR05
+L VCC #PWR04
 U 1 1 4C5FD35E
 P 6050 4350
-F 0 "#PWR05" H 6050 4450 30  0001 C CNN
+F 0 "#PWR04" H 6050 4450 30  0001 C CNN
 F 1 "VCC" H 6050 4450 30  0000 C CNN
 	1    6050 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L GND #PWR05
 U 1 1 4C5FD34E
 P 5150 4850
-F 0 "#PWR06" H 5150 4850 30  0001 C CNN
+F 0 "#PWR05" H 5150 4850 30  0001 C CNN
 F 1 "GND" H 5150 4780 30  0001 C CNN
 	1    5150 4850
 	1    0    0    -1  
@@ -259,28 +233,28 @@ F 2 "TSSOP8" H 5650 4850 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR07
+L VCC #PWR06
 U 1 1 4C5FCFB4
 P 5000 2800
-F 0 "#PWR07" H 5000 2900 30  0001 C CNN
+F 0 "#PWR06" H 5000 2900 30  0001 C CNN
 F 1 "VCC" H 5000 2900 30  0000 C CNN
 	1    5000 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR08
+L GND #PWR07
 U 1 1 4C5FCF5E
 P 5150 3150
-F 0 "#PWR08" H 5150 3150 30  0001 C CNN
+F 0 "#PWR07" H 5150 3150 30  0001 C CNN
 F 1 "GND" H 5150 3080 30  0001 C CNN
 	1    5150 3150
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L GND #PWR08
 U 1 1 4C5FCF4F
 P 4450 4050
-F 0 "#PWR09" H 4450 4050 30  0001 C CNN
+F 0 "#PWR08" H 4450 4050 30  0001 C CNN
 F 1 "GND" H 4450 3980 30  0001 C CNN
 	1    4450 4050
 	1    0    0    -1  
