@@ -10,9 +10,8 @@ class Example
 	{
 		IPConnection ipcon = new IPConnection(HOST, PORT); // Create connection to brickd
 		BrickletLinearPoti lp = new BrickletLinearPoti(UID); // Create device object
-		ipcon.AddDevice(lp); // Add device to ip connection
+		ipcon.AddDevice(lp); // Add device to IP connection
 		// Don't use device before it is added to a connection
-
 
 		// Get current position of poti (return value has range 0-100)
 		ushort position;
@@ -22,5 +21,5 @@ class Example
 
 		System.Console.WriteLine("Press ctrl+c to exit");
 		ipcon.JoinThread();
-    }
+	}
 }
