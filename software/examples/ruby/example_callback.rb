@@ -21,7 +21,7 @@ ipcon.add_device lp # Add device to IP connection
 lp.set_position_callback_period 50
 
 # Register position callback (parameter has range 0-100)
-lp.register_callback BrickletLinearPoti::CALLBACK_POSITION, do |position|
+lp.register_callback(BrickletLinearPoti::CALLBACK_POSITION) do |position|
   puts "Position: #{position}"
 end
 
