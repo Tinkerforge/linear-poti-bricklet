@@ -27,7 +27,8 @@ class Example
 		// Register position callback to function PositionCB
 		lp.RegisterCallback(new BrickletLinearPoti.Position(PositionCB));
 
-		System.Console.WriteLine("Press ctrl+c to exit");
-		ipcon.JoinThread();
+		System.Console.WriteLine("Press key to exit");
+		System.Console.ReadKey();
+		ipcon.Destroy();
 	}
 }
