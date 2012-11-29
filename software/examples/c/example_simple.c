@@ -9,23 +9,20 @@
 #define UID "abc" // Change to your UID
 
 int main() {
-	// Create IP connection to brickd
+	// Create IP connection
 	IPConnection ipcon;
-	if(ipcon_create(&ipcon, HOST, PORT) < 0) {
-		fprintf(stderr, "Could not create connection\n");
-		exit(1);
-	}
+	ipcon_create(&ipcon);
 
 	// Create device object
 	LinearPoti poti;
-	linear_poti_create(&poti, UID); 
+	linear_poti_create(&poti, UID, &ipcon); 
 
-	// Add device to IP connection
-	if(ipcon_add_device(&ipcon, &poti) < 0) {
-		fprintf(stderr, "Could not connect to Bricklet\n");
+	// Connect to brickd
+	if(ipcon_connect(&ipcon, HOST, PORT) < 0) {
+		fprintf(stderr, "Could not connect\n");
 		exit(1);
 	}
-	// Don't use device before it is added to a connection
+	// Don't use device before ipcon is connected
 
 	// Get current position (value has range 0-100)
 	uint16_t position;

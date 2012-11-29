@@ -9,28 +9,25 @@
 #define UID "abc" // Change to your UID
 
 // Callback function for position callback (parameter has range 0-100)
-void cb_position(uint16_t position) {
+void cb_position(uint16_t position, void *user_data) {
 	printf("Position: %d\n", position);
 }
 
 int main() {
-	// Create IP connection to brickd
+	// Create IP connection
 	IPConnection ipcon;
-	if(ipcon_create(&ipcon, HOST, PORT) < 0) {
-		fprintf(stderr, "Could not create connection\n");
-		exit(1);
-	}
+	ipcon_create(&ipcon);
 
 	// Create device object
 	LinearPoti poti;
-	linear_poti_create(&poti, UID); 
+	linear_poti_create(&poti, UID, &ipcon); 
 
-	// Add device to IP connection
-	if(ipcon_add_device(&ipcon, &poti) < 0) {
-		fprintf(stderr, "Could not connect to Bricklet\n");
+	// Connect to brickd
+	if(ipcon_connect(&ipcon, HOST, PORT) < 0) {
+		fprintf(stderr, "Could not connect\n");
 		exit(1);
 	}
-	// Don't use device before it is added to a connection
+	// Don't use device before ipcon is connected
 
 	// Set Period for position callback to 0.05s (50ms)
 	// Note: The position callback is only called every 50ms if the 
@@ -40,7 +37,8 @@ int main() {
 	// Register position callback to function cb_position
 	linear_poti_register_callback(&poti,
 	                              LINEAR_POTI_CALLBACK_POSITION, 
-	                              cb_position);
+	                              cb_position,
+								  NULL);
 
 	printf("Press key to exit\n");
 	getchar();
