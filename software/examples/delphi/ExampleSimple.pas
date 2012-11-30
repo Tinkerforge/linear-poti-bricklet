@@ -27,7 +27,7 @@ procedure TExample.Execute;
 var position: word;
 begin
   { Create IP connection }
-  ipcon := TIPConnection.Create();
+  ipcon := TIPConnection.Create;
 
   { Create device object }
   lp := TBrickletLinearPoti.Create(UID, ipcon);
@@ -42,6 +42,7 @@ begin
 
   WriteLn('Press key to exit');
   ReadLn;
+  ipcon.Destroy;
 end;
 
 begin
