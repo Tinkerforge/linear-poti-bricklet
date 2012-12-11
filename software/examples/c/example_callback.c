@@ -39,7 +39,7 @@ int main() {
 	// Register position callback to function cb_position
 	linear_poti_register_callback(&poti,
 	                              LINEAR_POTI_CALLBACK_POSITION,
-	                              cb_position,
+	                              (void *)cb_position,
 	                              NULL);
 
 	printf("Press key to exit\n");
