@@ -12,7 +12,7 @@ type
     ipcon: TIPConnection;
     lp: TBrickletLinearPoti;
   public
-    procedure PositionCB(sender: TObject; const position: word);
+    procedure PositionCB(sender: TBrickletLinearPoti; const position: word);
     procedure Execute;
   end;
 
@@ -25,7 +25,7 @@ var
   e: TExample;
 
 { Callback function for position callback (parameter has range 0-100) }
-procedure TExample.PositionCB(sender: TObject; const position: word);
+procedure TExample.PositionCB(sender: TBrickletLinearPoti; const position: word);
 begin
   WriteLn(Format('Position: %d', [position]));
 end;
