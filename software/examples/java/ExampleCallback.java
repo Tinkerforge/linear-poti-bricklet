@@ -21,7 +21,7 @@ public class ExampleCallback {
 		poti.setPositionCallbackPeriod(50);
 
 		// Add and implement position listener (called if position changes)
-		poti.addListener(new BrickletLinearPoti.PositionListener() {
+		poti.addPositionListener(new BrickletLinearPoti.PositionListener() {
 			public void position(int position) {
 				System.out.println("Position: " + position);
 			}
