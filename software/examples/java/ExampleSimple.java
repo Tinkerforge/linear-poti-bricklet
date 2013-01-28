@@ -16,7 +16,7 @@ public class ExampleSimple {
 		// Don't use device before ipcon is connected
 
 		// Get current position (return value has range 0-100)
-		int position = poti.getPosition(); // Can throw IPConnection.TimeoutException
+		int position = poti.getPosition(); // Can throw com.tinkerforge.TimeoutException
 
 		System.out.println("Position: " + position);
 
