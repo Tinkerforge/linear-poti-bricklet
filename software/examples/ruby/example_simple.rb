@@ -17,8 +17,9 @@ ipcon.connect HOST, PORT # Connect to brickd
 # Don't use device before ipcon is connected
 
 # Get current position of poti (return value has range 0-100)
-position = lp.get_position()
+position = lp.get_position
 puts "Position: #{position}"
 
 puts 'Press key to exit'
 $stdin.gets
+ipcon.disconnect
