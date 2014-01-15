@@ -6,14 +6,14 @@ require_once('Tinkerforge/BrickletLinearPoti.php');
 use Tinkerforge\IPConnection;
 use Tinkerforge\BrickletLinearPoti;
 
-$host = 'localhost';
-$port = 4223;
-$uid = '7jb'; // Change to your UID
+const HOST = 'localhost';
+const PORT = 4223;
+const UID = '7jb'; // Change to your UID
 
 $ipcon = new IPConnection(); // Create IP connection
-$poti = new BrickletLinearPoti($uid, $ipcon); // Create device object
+$poti = new BrickletLinearPoti(UID, $ipcon); // Create device object
 
-$ipcon->connect($host, $port); // Connect to brickd
+$ipcon->connect(HOST, PORT); // Connect to brickd
 // Don't use device before ipcon is connected
 
 // Get current position of poti (return value has range 0-100)
