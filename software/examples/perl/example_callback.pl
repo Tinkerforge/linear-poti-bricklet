@@ -7,8 +7,8 @@ use constant HOST => 'localhost';
 use constant PORT => 4223;
 use constant UID => '5WL'; # Change to your UID
 
-my $ipcon = IPConnection->new(); # Create IP connection
-my $poti = BrickletLinearPoti->new(&UID, $ipcon); # Create device object
+my $ipcon = Tinkerforge::IPConnection->new(); # Create IP connection
+my $poti = Tinkerforge::BrickletLinearPoti->new(&UID, $ipcon); # Create device object
 
 # Callback function for position callback (parameter has range 0-100)
 sub cb_position
