@@ -1,12 +1,11 @@
-var IPConnection = require('Tinkerforge/IPConnection');
-var BrickletLinearPoti = require('Tinkerforge/BrickletLinearPoti');
+var Tinkerforge = require('tinkerforge');
 
 var HOST = 'localhost';
 var PORT = 4223;
 var UID = '5WL';// Change to your UID
 
-var ipcon = new IPConnection();// Create IP connection
-var poti = new BrickletLinearPoti(UID, ipcon);// Create device object
+var ipcon = new Tinkerforge.IPConnection();// Create IP connection
+var poti = new Tinkerforge.BrickletLinearPoti(UID, ipcon);// Create device object
 
 ipcon.connect(HOST, PORT,
     function(error) {
@@ -15,7 +14,7 @@ ipcon.connect(HOST, PORT,
 );// Connect to brickd
 
 // Don't use device before ipcon is connected
-ipcon.on(IPConnection.CALLBACK_CONNECTED,
+ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
     function(connectReason) {
         // Set Period for position callback to 0.05s (50ms)
         // Note: The position position is only called every 50ms if the 
@@ -25,7 +24,7 @@ ipcon.on(IPConnection.CALLBACK_CONNECTED,
 );
 
 // Register position callback
-poti.on(BrickletLinearPoti.CALLBACK_POSITION,
+poti.on(Tinkerforge.BrickletLinearPoti.CALLBACK_POSITION,
     // Callback function for position callback (parameter has range 0-100)
     function(position) {
         console.log('Position: '+position);
