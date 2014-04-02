@@ -14,7 +14,8 @@ my $poti = Tinkerforge::BrickletLinearPoti->new(&UID, $ipcon); # Create device o
 sub cb_position
 {
     my ($position) = @_;
-    print "\nPosition: $position\n";
+
+    print "Position: $position\n";
 }
 
 $ipcon->connect(&HOST, &PORT); # Connect to brickd
@@ -28,7 +29,7 @@ $poti->set_position_callback_period(50);
 # Register position callback to function cb_position
 $poti->register_callback($poti->CALLBACK_POSITION, 'cb_position');
 
-print "\nPress any key to exit...\n";
+print "Press any key to exit...\n";
 <STDIN>;
 $ipcon->disconnect();
 
