@@ -1,4 +1,4 @@
-function matlab_example_simple
+function matlab_example_simple()
     more off;
 
     HOST = "localhost";
