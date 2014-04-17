@@ -17,13 +17,13 @@ function octave_example_callback
     poti.setPositionCallbackPeriod(50);
 
     % Register position callback to function cb_position
-    poti.addPositionListener("cb_position");
+    poti.addPositionCallback(@cb_position);
 
-    input("\nPress any key to exit...\n", "s");
+    input("Press any key to exit...\n", "s");
     ipcon.disconnect();
 end
 
 % Callback function for position callback (parameter has range 0-100)
-function cb_position(position_value)
-    fprintf("Position: %g\n", position_value);
+function cb_position(e)
+    fprintf("Position: %g\n", e.position);
 end

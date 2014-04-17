@@ -13,10 +13,8 @@ function matlab_example_simple
 
     % Get current position of poti (return value has range 0-100)
     position = poti.getPosition();
-
     fprintf("Position: %g\n", position);
 
-    input("\nPress any key to exit...\n", "s");
+    input("Press any key to exit...\n", "s");
     ipcon.disconnect();
 end
-
