@@ -4,15 +4,15 @@ class Example
 {
 	private static string HOST = "localhost";
 	private static int PORT = 4223;
-	private static string UID = "ABC"; // Change to your UID
+	private static string UID = "XYZ"; // Change to your UID
 
-	// Callback function for position callback (parameter has range 0-100) 
+	// Callback function for position callback
 	static void PositionCB(BrickletLinearPoti sender, int position)
 	{
 		System.Console.WriteLine("Position: " + position);
 	}
 
-	static void Main() 
+	static void Main()
 	{
 		IPConnection ipcon = new IPConnection(); // Create IP connection
 		BrickletLinearPoti lp = new BrickletLinearPoti(UID, ipcon); // Create device object
@@ -20,9 +20,9 @@ class Example
 		ipcon.Connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
 
-		// Set Period for position callback to 0.05s (50ms)
-		// Note: The position callback is only called every second if the 
-		//       position has changed since the last call!
+		// Set period for position callback to 0.05s (50ms)
+		// Note: The position callback is only called every 0.05 seconds
+		//       if the position has changed since the last call!
 		lp.SetPositionCallbackPeriod(50);
 
 		// Register position callback to function PositionCB

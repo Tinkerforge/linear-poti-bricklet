@@ -4,9 +4,9 @@ class Example
 {
 	private static string HOST = "localhost";
 	private static int PORT = 4223;
-	private static string UID = "ABC"; // Change to your UID
+	private static string UID = "XYZ"; // Change to your UID
 
-	static void Main() 
+	static void Main()
 	{
 		IPConnection ipcon = new IPConnection(); // Create IP connection
 		BrickletLinearPoti lp = new BrickletLinearPoti(UID, ipcon); // Create device object
@@ -14,9 +14,8 @@ class Example
 		ipcon.Connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
 
-		// Get current position of poti (return value has range 0-100)
+		// Get current position
 		int position = lp.GetPosition();
-
 		System.Console.WriteLine("Position: " + position);
 
 		System.Console.WriteLine("Press enter to exit");
