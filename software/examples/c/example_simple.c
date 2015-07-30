@@ -23,7 +23,7 @@ int main() {
 	}
 	// Don't use device before ipcon is connected
 
-	// Get current position
+	// Get current position (range is 0 to 100)
 	uint16_t position;
 	if(linear_poti_get_position(&lp, &position) < 0) {
 		fprintf(stderr, "Could not get position, probably timeout\n");

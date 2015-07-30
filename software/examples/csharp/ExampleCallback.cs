@@ -6,7 +6,7 @@ class Example
 	private static int PORT = 4223;
 	private static string UID = "XYZ"; // Change to your UID
 
-	// Callback function for position callback
+	// Callback function for position callback (parameter has range 0 to 100)
 	static void PositionCB(BrickletLinearPoti sender, int position)
 	{
 		System.Console.WriteLine("Position: " + position);

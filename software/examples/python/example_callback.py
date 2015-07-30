@@ -8,7 +8,7 @@ UID = "XYZ" # Change to your UID
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_linear_poti import LinearPoti
 
-# Callback function for position callback
+# Callback function for position callback (parameter has range 0 to 100)
 def cb_position(position):
     print('Position: ' + str(position))
 

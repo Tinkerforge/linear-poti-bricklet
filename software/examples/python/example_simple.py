@@ -15,7 +15,7 @@ if __name__ == "__main__":
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
 
-    # Get current position
+    # Get current position (range is 0 to 100)
     position = lp.get_position()
     print('Position: ' + str(position))
 

@@ -20,7 +20,7 @@ public class ExampleCallback {
 		//       if the position has changed since the last call!
 		lp.setPositionCallbackPeriod(50);
 
-		// Add position listener
+		// Add position listener (parameter has range 0 to 100)
 		lp.addPositionListener(new BrickletLinearPoti.PositionListener() {
 			public void position(int position) {
 				System.out.println("Position: " + position);
