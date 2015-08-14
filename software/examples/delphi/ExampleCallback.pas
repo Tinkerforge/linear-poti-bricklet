@@ -19,12 +19,12 @@ type
 const
   HOST = 'localhost';
   PORT = 4223;
-  UID = '7jb'; { Change to your UID }
+  UID = 'XYZ'; { Change to your UID }
 
 var
   e: TExample;
 
-{ Callback function for position callback (parameter has range 0-100) }
+{ Callback procedure for position callback (parameter has range 0 to 100) }
 procedure TExample.PositionCB(sender: TBrickletLinearPoti; const position: word);
 begin
   WriteLn(Format('Position: %d', [position]));
@@ -42,9 +42,9 @@ begin
   ipcon.Connect(HOST, PORT);
   { Don't use device before ipcon is connected }
 
-  { Set Period for position callback to 0.05s (50ms)
-    Note: The position callback is only called every 50ms if the
-          position has changed since the last call! }
+  { Set period for position callback to 0.05s (50ms)
+    Note: The position callback is only called every 0.05 seconds
+          if the position has changed since the last call! }
   lp.SetPositionCallbackPeriod(50);
 
   { Register position callback to procedure PositionCB }

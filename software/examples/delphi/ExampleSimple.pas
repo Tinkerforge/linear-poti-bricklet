@@ -18,7 +18,7 @@ type
 const
   HOST = 'localhost';
   PORT = 4223;
-  UID = '7jb'; { Change to your UID }
+  UID = 'XYZ'; { Change to your UID }
 
 var
   e: TExample;
@@ -36,7 +36,7 @@ begin
   ipcon.Connect(HOST, PORT);
   { Don't use device before ipcon is connected }
 
-  { Get current position (value has range 0-100) }
+  { Get current position (range is 0 to 100) }
   position := lp.GetPosition;
   WriteLn(Format('Position: %d', [position]));
 
