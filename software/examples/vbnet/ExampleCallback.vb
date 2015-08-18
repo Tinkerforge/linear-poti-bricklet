@@ -3,9 +3,9 @@ Imports Tinkerforge
 Module ExampleCallback
     Const HOST As String = "localhost"
     Const PORT As Integer = 4223
-    Const UID As String = "aNt" ' Change to your UID
+    Const UID As String = "XYZ" ' Change to your UID
 
-    'Callback function for position callback (parameter has range 0-100) 
+    ' Callback function for position callback (parameter has range 0 to 100)
     Sub PositionCB(ByVal sender As BrickletLinearPoti, ByVal position As Integer)
         System.Console.WriteLine("Position: " + position.ToString())
     End Sub
@@ -17,9 +17,9 @@ Module ExampleCallback
         ipcon.Connect(HOST, PORT) ' Connect to brickd
         ' Don't use device before ipcon is connected
 
-        ' Set Period for position callback to 0.05s (50ms)
-        ' Note: The position callback is only called every second if the 
-        '       position has changed since the last call!
+        ' Set period for position callback to 0.05s (50ms)
+        ' Note: The position callback is only called every 0.05 seconds
+        '       if the position has changed since the last call!
         lp.SetPositionCallbackPeriod(50)
 
         ' Register position callback to function PositionCB
