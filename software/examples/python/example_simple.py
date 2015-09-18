@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     # Get current position (range is 0 to 100)
     position = lp.get_position()
-    print('Position: ' + str(position))
+    print("Position: " + str(position))
 
-    raw_input('Press key to exit\n') # Use input() in Python 3
+    raw_input("Press key to exit\n") # Use input() in Python 3
     ipcon.disconnect()

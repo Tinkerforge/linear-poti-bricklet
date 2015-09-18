@@ -30,16 +30,16 @@ int main(void) {
 	}
 	// Don't use device before ipcon is connected
 
-	// Set period for position callback to 0.05s (50ms)
-	// Note: The position callback is only called every 0.05 seconds
-	//       if the position has changed since the last call!
-	linear_poti_set_position_callback_period(&lp, 50);
-
 	// Register position callback to function cb_position
 	linear_poti_register_callback(&lp,
 	                              LINEAR_POTI_CALLBACK_POSITION,
 	                              (void *)cb_position,
 	                              NULL);
+
+	// Set period for position callback to 0.05s (50ms)
+	// Note: The position callback is only called every 0.05 seconds
+	//       if the position has changed since the last call!
+	linear_poti_set_position_callback_period(&lp, 50);
 
 	printf("Press key to exit\n");
 	getchar();

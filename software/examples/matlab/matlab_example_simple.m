@@ -4,18 +4,18 @@ function matlab_example_simple()
 
     HOST = 'localhost';
     PORT = 4223;
-    UID = '5WL'; % Change to your UID
+    UID = 'XYZ'; % Change to your UID
 
     ipcon = IPConnection(); % Create IP connection
-    poti = BrickletLinearPoti(UID, ipcon); % Create device object
+    lp = BrickletLinearPoti(UID, ipcon); % Create device object
 
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don't use device before ipcon is connected
 
-    % Get current position of poti (return value has range 0-100)
-    position = poti.getPosition();
-    fprintf('Position: %g\n', position);
+    % Get current position (range is 0 to 100)
+    position = lp.getPosition();
+    fprintf('Position: %i\n', position);
 
-    input('Press any key to exit...\n', 's');
+    input('Press key to exit\n', 's');
     ipcon.disconnect();
 end
