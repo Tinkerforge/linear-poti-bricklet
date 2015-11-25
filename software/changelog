@@ -1,14 +1,14 @@
-1.0.0:
+2011-10-06: 1.0.0 (9fe559d)
 - Initial version
 
-1.1.0:
+2012-02-15: 1.1.0 (7dbe9dc)
 - Add support for tick types
 
-2.0.0:
+2013-01-17: 2.0.0 (f8d5e9f)
 - Support for Protocol 2.0
 
-2.0.1:
+2013-05-15: 2.0.1 (2c561c7)
 - Don't send threshold callback twice
 
-2.0.2:
+2013-12-19: 2.0.2 (fe6993a)
 - Fix wrong length for GetDebounce packet (through brickletlib)
