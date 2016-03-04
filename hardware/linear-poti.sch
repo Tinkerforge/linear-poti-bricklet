@@ -1,4 +1,5 @@
-EESchema Schematic File Version 2  date Mo 14 Jan 2013 13:24:25 CET
+EESchema Schematic File Version 2
+LIBS:tinkerforge
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,23 +29,22 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tinkerforge
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Linear Poti Bricklet"
-Date "14 jan 2013"
-Rev "1.1"
+Date "2016-03-04"
+Rev "1.2"
 Comp "Tinkerforge GmbH"
 Comment1 "Licensed under CERN OHL v.1.1"
-Comment2 "Copyright (©) 2011, B.Nordmeyer <bastian@tinkerforge.com>"
+Comment2 "Copyright (©) 2016, B.Nordmeyer <bastian@tinkerforge.com>"
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 550  7200 0    40   ~ 0
-Copyright Tinkerforge GmbH 2011.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
+Text Notes 550  7700 0    40   ~ 0
+Copyright Tinkerforge GmbH 2016.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
 NoConn ~ 4900 2900
 Wire Wire Line
 	5150 3150 5150 3000
@@ -107,6 +106,8 @@ U 1 1 4CE528DC
 P 6500 4500
 F 0 "#PWR01" H 6500 4500 30  0001 C CNN
 F 1 "GND" H 6500 4430 30  0001 C CNN
+F 2 "" H 6500 4500 60  0001 C CNN
+F 3 "" H 6500 4500 60  0001 C CNN
 	1    6500 4500
 	1    0    0    -1  
 $EndComp
@@ -115,49 +116,54 @@ L C C1
 U 1 1 4CE528C6
 P 6300 4450
 F 0 "C1" V 6150 4450 50  0000 L CNN
-F 1 "100nF" V 6400 4450 50  0000 L CNN
-F 2 "0603" H 6300 4450 60  0001 C CNN
+F 1 "100nF" V 6450 4350 50  0000 L CNN
+F 2 "0603E" H 6300 4450 60  0001 C CNN
+F 3 "" H 6300 4450 60  0001 C CNN
 	1    6300 4450
 	0    1    1    0   
 $EndComp
 $Comp
 L DRILL U2
 U 1 1 4C6534CF
-P 10700 6500
-F 0 "U2" H 10750 6550 60  0001 C CNN
-F 1 "DRILL" H 10700 6500 60  0000 C CNN
-F 2 "DRILL_NP" H 10700 6500 60  0001 C CNN
-	1    10700 6500
+P 10700 6200
+F 0 "U2" H 10750 6250 60  0001 C CNN
+F 1 "DRILL" H 10700 6200 60  0000 C CNN
+F 2 "DRILL_NP" H 10700 6200 60  0001 C CNN
+F 3 "" H 10700 6200 60  0001 C CNN
+	1    10700 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L DRILL U3
 U 1 1 4C6534CD
-P 10700 6700
-F 0 "U3" H 10750 6750 60  0001 C CNN
-F 1 "DRILL" H 10700 6700 60  0000 C CNN
-F 2 "DRILL_NP" H 10700 6700 60  0001 C CNN
-	1    10700 6700
+P 10700 6400
+F 0 "U3" H 10750 6450 60  0001 C CNN
+F 1 "DRILL" H 10700 6400 60  0000 C CNN
+F 2 "DRILL_NP" H 10700 6400 60  0001 C CNN
+F 3 "" H 10700 6400 60  0001 C CNN
+	1    10700 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L DRILL U5
 U 1 1 4C6534CA
-P 11000 6700
-F 0 "U5" H 11050 6750 60  0001 C CNN
-F 1 "DRILL" H 11000 6700 60  0000 C CNN
-F 2 "DRILL_NP" H 11000 6700 60  0001 C CNN
-	1    11000 6700
+P 11000 6400
+F 0 "U5" H 11050 6450 60  0001 C CNN
+F 1 "DRILL" H 11000 6400 60  0000 C CNN
+F 2 "DRILL_NP" H 11000 6400 60  0001 C CNN
+F 3 "" H 11000 6400 60  0001 C CNN
+	1    11000 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L DRILL U4
 U 1 1 4C6534C3
-P 11000 6500
-F 0 "U4" H 11050 6550 60  0001 C CNN
-F 1 "DRILL" H 11000 6500 60  0000 C CNN
-F 2 "DRILL_NP" H 11000 6500 60  0001 C CNN
-	1    11000 6500
+P 11000 6200
+F 0 "U4" H 11050 6250 60  0001 C CNN
+F 1 "DRILL" H 11000 6200 60  0000 C CNN
+F 2 "DRILL_NP" H 11000 6200 60  0001 C CNN
+F 3 "" H 11000 6200 60  0001 C CNN
+	1    11000 6200
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4900 3800
@@ -171,6 +177,7 @@ P 7150 3150
 F 0 "RV1" H 7250 3250 50  0000 C CNN
 F 1 "F6005N" H 7150 3050 50  0000 C CNN
 F 2 "F6005N" H 7150 3150 60  0001 C CNN
+F 3 "" H 7150 3150 60  0001 C CNN
 	1    7150 3150
 	1    0    0    -1  
 $EndComp
@@ -180,6 +187,8 @@ U 1 1 4C652DE8
 P 7500 3250
 F 0 "#PWR02" H 7500 3250 30  0001 C CNN
 F 1 "GND" H 7500 3180 30  0001 C CNN
+F 2 "" H 7500 3250 60  0001 C CNN
+F 3 "" H 7500 3250 60  0001 C CNN
 	1    7500 3250
 	1    0    0    -1  
 $EndComp
@@ -191,6 +200,8 @@ U 1 1 4C652DAA
 P 6800 3150
 F 0 "#PWR03" H 6800 3250 30  0001 C CNN
 F 1 "VCC" H 6800 3250 30  0000 C CNN
+F 2 "" H 6800 3150 60  0001 C CNN
+F 3 "" H 6800 3150 60  0001 C CNN
 	1    6800 3150
 	1    0    0    -1  
 $EndComp
@@ -210,6 +221,8 @@ U 1 1 4C5FD35E
 P 6050 4350
 F 0 "#PWR04" H 6050 4450 30  0001 C CNN
 F 1 "VCC" H 6050 4450 30  0000 C CNN
+F 2 "" H 6050 4350 60  0001 C CNN
+F 3 "" H 6050 4350 60  0001 C CNN
 	1    6050 4350
 	1    0    0    -1  
 $EndComp
@@ -219,6 +232,8 @@ U 1 1 4C5FD34E
 P 5150 4850
 F 0 "#PWR05" H 5150 4850 30  0001 C CNN
 F 1 "GND" H 5150 4780 30  0001 C CNN
+F 2 "" H 5150 4850 60  0001 C CNN
+F 3 "" H 5150 4850 60  0001 C CNN
 	1    5150 4850
 	1    0    0    -1  
 $EndComp
@@ -228,7 +243,8 @@ U 1 1 4C5FD337
 P 5650 4850
 F 0 "U1" H 5500 5350 60  0000 C CNN
 F 1 "M24C64" H 5650 4850 60  0000 C CNN
-F 2 "TSSOP8" H 5650 4850 60  0001 C CNN
+F 2 "SO-8" H 5650 4850 60  0001 C CNN
+F 3 "" H 5650 4850 60  0001 C CNN
 	1    5650 4850
 	1    0    0    -1  
 $EndComp
@@ -238,6 +254,8 @@ U 1 1 4C5FCFB4
 P 5000 2800
 F 0 "#PWR06" H 5000 2900 30  0001 C CNN
 F 1 "VCC" H 5000 2900 30  0000 C CNN
+F 2 "" H 5000 2800 60  0001 C CNN
+F 3 "" H 5000 2800 60  0001 C CNN
 	1    5000 2800
 	1    0    0    -1  
 $EndComp
@@ -247,6 +265,8 @@ U 1 1 4C5FCF5E
 P 5150 3150
 F 0 "#PWR07" H 5150 3150 30  0001 C CNN
 F 1 "GND" H 5150 3080 30  0001 C CNN
+F 2 "" H 5150 3150 60  0001 C CNN
+F 3 "" H 5150 3150 60  0001 C CNN
 	1    5150 3150
 	1    0    0    -1  
 $EndComp
@@ -256,6 +276,8 @@ U 1 1 4C5FCF4F
 P 4450 4050
 F 0 "#PWR08" H 4450 4050 30  0001 C CNN
 F 1 "GND" H 4450 3980 30  0001 C CNN
+F 2 "" H 4450 4050 60  0001 C CNN
+F 3 "" H 4450 4050 60  0001 C CNN
 	1    4450 4050
 	1    0    0    -1  
 $EndComp
@@ -266,6 +288,7 @@ P 4450 3350
 F 0 "P1" H 4200 3900 60  0000 C CNN
 F 1 "CON-SENSOR" V 4650 3350 60  0000 C CNN
 F 2 "CON-SENSOR" H 4450 3350 60  0001 C CNN
+F 3 "" H 4450 3350 60  0001 C CNN
 	1    4450 3350
 	-1   0    0    -1  
 $EndComp
