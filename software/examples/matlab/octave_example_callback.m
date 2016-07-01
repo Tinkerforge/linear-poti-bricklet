@@ -3,7 +3,7 @@ function octave_example_callback()
 
     HOST = "localhost";
     PORT = 4223;
-    UID = "XYZ"; % Change to your UID
+    UID = "XYZ"; % Change XYZ to the UID of your Linear Poti Bricklet
 
     ipcon = java_new("com.tinkerforge.IPConnection"); % Create IP connection
     lp = java_new("com.tinkerforge.BrickletLinearPoti", UID, ipcon); % Create device object

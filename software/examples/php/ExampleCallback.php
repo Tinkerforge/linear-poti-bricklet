@@ -8,7 +8,7 @@ use Tinkerforge\BrickletLinearPoti;
 
 const HOST = 'localhost';
 const PORT = 4223;
-const UID = 'XYZ'; // Change to your UID
+const UID = 'XYZ'; // Change XYZ to the UID of your Linear Poti Bricklet
 
 // Callback function for position callback (parameter has range 0 to 100)
 function cb_position($position)

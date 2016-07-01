@@ -4,7 +4,7 @@ function matlab_example_simple()
 
     HOST = 'localhost';
     PORT = 4223;
-    UID = 'XYZ'; % Change to your UID
+    UID = 'XYZ'; % Change XYZ to the UID of your Linear Poti Bricklet
 
     ipcon = IPConnection(); % Create IP connection
     lp = handle(BrickletLinearPoti(UID, ipcon), 'CallbackProperties'); % Create device object

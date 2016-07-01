@@ -1,7 +1,7 @@
 #!/bin/sh
 # Connects to localhost:4223 by default, use --host and --port to change this
 
-uid=XYZ # Change to your UID
+uid=XYZ # Change XYZ to the UID of your Linear Poti Bricklet
 
 # Handle incoming position callbacks (parameter has range 0 to 100)
 tinkerforge dispatch linear-poti-bricklet $uid position &

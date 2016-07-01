@@ -5,7 +5,7 @@ use Tinkerforge::BrickletLinearPoti;
 
 use constant HOST => 'localhost';
 use constant PORT => 4223;
-use constant UID => 'XYZ'; # Change to your UID
+use constant UID => 'XYZ'; # Change XYZ to the UID of your Linear Poti Bricklet
 
 # Callback subroutine for position callback (parameter has range 0 to 100)
 sub cb_position

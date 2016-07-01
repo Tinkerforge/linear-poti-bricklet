@@ -5,7 +5,7 @@
 
 #define HOST "localhost"
 #define PORT 4223
-#define UID "XYZ" // Change to your UID
+#define UID "XYZ" // Change XYZ to the UID of your Linear Poti Bricklet
 
 // Callback function for position callback (parameter has range 0 to 100)
 void cb_position(uint16_t position, void *user_data) {

@@ -4,7 +4,7 @@ Imports Tinkerforge
 Module ExampleCallback
     Const HOST As String = "localhost"
     Const PORT As Integer = 4223
-    Const UID As String = "XYZ" ' Change to your UID
+    Const UID As String = "XYZ" ' Change XYZ to the UID of your Linear Poti Bricklet
 
     ' Callback subroutine for position callback (parameter has range 0 to 100)
     Sub PositionCB(ByVal sender As BrickletLinearPoti, ByVal position As Integer)

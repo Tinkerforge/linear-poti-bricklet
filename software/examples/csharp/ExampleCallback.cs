@@ -5,7 +5,7 @@ class Example
 {
 	private static string HOST = "localhost";
 	private static int PORT = 4223;
-	private static string UID = "XYZ"; // Change to your UID
+	private static string UID = "XYZ"; // Change XYZ to the UID of your Linear Poti Bricklet
 
 	// Callback function for position callback (parameter has range 0 to 100)
 	static void PositionCB(BrickletLinearPoti sender, int position)
