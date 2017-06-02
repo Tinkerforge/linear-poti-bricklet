@@ -5,8 +5,8 @@ function octave_example_callback()
     PORT = 4223;
     UID = "XYZ"; % Change XYZ to the UID of your Linear Poti Bricklet
 
-    ipcon = java_new("com.tinkerforge.IPConnection"); % Create IP connection
-    lp = java_new("com.tinkerforge.BrickletLinearPoti", UID, ipcon); % Create device object
+    ipcon = javaObject("com.tinkerforge.IPConnection"); % Create IP connection
+    lp = javaObject("com.tinkerforge.BrickletLinearPoti", UID, ipcon); % Create device object
 
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don't use device before ipcon is connected
