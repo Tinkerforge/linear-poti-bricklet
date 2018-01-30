@@ -3,5 +3,5 @@
 
 uid=XYZ # Change XYZ to the UID of your Linear Poti Bricklet
 
-# Get current position (range is 0 to 100)
+# Get current position
 tinkerforge call linear-poti-bricklet $uid get-position

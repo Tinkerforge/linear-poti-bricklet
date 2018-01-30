@@ -13,9 +13,9 @@ my $lp = Tinkerforge::BrickletLinearPoti->new(&UID, $ipcon); # Create device obj
 $ipcon->connect(&HOST, &PORT); # Connect to brickd
 # Don't use device before ipcon is connected
 
-# Get current position (range is 0 to 100)
+# Get current position
 my $position = $lp->get_position();
-print "Position: $position\n";
+print "Position: $position\n"; # Range: 0 to 100
 
 print "Press key to exit\n";
 <STDIN>;

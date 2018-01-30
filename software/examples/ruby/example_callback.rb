@@ -16,9 +16,9 @@ lp = BrickletLinearPoti.new UID, ipcon # Create device object
 ipcon.connect HOST, PORT # Connect to brickd
 # Don't use device before ipcon is connected
 
-# Register position callback (parameter has range 0 to 100)
+# Register position callback
 lp.register_callback(BrickletLinearPoti::CALLBACK_POSITION) do |position|
-  puts "Position: #{position}"
+  puts "Position: #{position}" # Range: 0 to 100
 end
 
 # Set period for position callback to 0.05s (50ms)

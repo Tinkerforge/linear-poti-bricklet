@@ -16,9 +16,9 @@ $lp = new BrickletLinearPoti(UID, $ipcon); // Create device object
 $ipcon->connect(HOST, PORT); // Connect to brickd
 // Don't use device before ipcon is connected
 
-// Get current position (range is 0 to 100)
+// Get current position
 $position = $lp->getPosition();
-echo "Position: $position\n";
+echo "Position: $position\n"; // Range: 0 to 100
 
 echo "Press key to exit\n";
 fgetc(fopen('php://stdin', 'r'));
