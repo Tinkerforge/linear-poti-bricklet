@@ -31,7 +31,6 @@ begin
 end;
 
 procedure TExample.Execute;
-var ;
 begin
   { Create IP connection }
   ipcon := TIPConnection.Create;
