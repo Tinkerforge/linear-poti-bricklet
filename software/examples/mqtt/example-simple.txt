@@ -2,5 +2,5 @@
 
 setup:
 	# Get current position
-	subscribe to tinkerforge/response/linear_poti/XYZ/get_position
+	subscribe to tinkerforge/response/linear_poti_bricklet/XYZ/get_position
 	publish '' to tinkerforge/request/linear_poti_bricklet/XYZ/get_position 
