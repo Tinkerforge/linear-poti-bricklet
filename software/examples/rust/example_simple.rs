@@ -15,7 +15,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     // Get current position.
     let position = lp.get_position().recv()?;
-    println!("Position: {}", position); // Range: 0 to 100
+    println!("Position: {} %", position); // Range: 0 to 100
 
     println!("Press enter to exit.");
     let mut _input = String::new();

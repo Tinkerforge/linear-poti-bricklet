@@ -25,5 +25,5 @@ end
 
 % Callback function for position callback
 function cb_position(e)
-    fprintf("Position: %d\n", e.position); % Range: 0 to 100
+    fprintf("Position: %d %%\n", e.position); % Range: 0 to 100
 end

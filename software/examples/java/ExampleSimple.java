@@ -19,7 +19,7 @@ public class ExampleSimple {
 
 		// Get current position
 		int position = lp.getPosition(); // Can throw com.tinkerforge.TimeoutException
-		System.out.println("Position: " + position); // Range: 0 to 100
+		System.out.println("Position: " + position + " %"); // Range: 0 to 100
 
 		System.out.println("Press key to exit"); System.in.read();
 		ipcon.disconnect();

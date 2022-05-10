@@ -19,7 +19,7 @@ Notebook[{
    RowBox[{"
 "}],
    RowBox[{"(*", "Callback function for position callback", "*)"}],
-   RowBox[{RowBox[{"PositionCB", "[", RowBox[{"sender_", ",", "position_"}], "]"}], ":=", "\[IndentingNewLine]", RowBox[{"Print", "[", RowBox[{"\"\<Position: \>\"", "<>", RowBox[{"ToString", "[", "position", "]"}]}], "]"}], RowBox[{"(*", "Range: 0 to 100", "*)"}]}],
+   RowBox[{RowBox[{"PositionCB", "[", RowBox[{"sender_", ",", "position_"}], "]"}], ":=", "\[IndentingNewLine]", RowBox[{"Print", "[", RowBox[{"\"\<Position: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"N", "[", RowBox[{"Quantity", "[", RowBox[{"position", ",", "\"\<%\>\""}], "]"}], "]"}], "]"}]}], "]"}], RowBox[{"(*", "Range: 0 to 100", "*)"}]}],
    RowBox[{"AddEventHandler", "[", RowBox[{RowBox[{"lp", "@", "PositionCallback"}], ",", "PositionCB"}], "]"}],
    RowBox[{"
 "}],

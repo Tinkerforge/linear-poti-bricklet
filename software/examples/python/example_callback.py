@@ -10,7 +10,7 @@ from tinkerforge.bricklet_linear_poti import BrickletLinearPoti
 
 # Callback function for position callback
 def cb_position(position):
-    print("Position: " + str(position)) # Range: 0 to 100
+    print("Position: " + str(position) + " %") # Range: 0 to 100
 
 if __name__ == "__main__":
     ipcon = IPConnection() # Create IP connection

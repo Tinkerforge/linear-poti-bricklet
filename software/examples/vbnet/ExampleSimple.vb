@@ -15,7 +15,7 @@ Module ExampleSimple
 
         ' Get current position
         Dim position As Integer = lp.GetPosition()
-        Console.WriteLine("Position: " + position.ToString()) ' Range: 0 to 100
+        Console.WriteLine("Position: " + position.ToString() + " %") ' Range: 0 to 100
 
         Console.WriteLine("Press key to exit")
         Console.ReadLine()

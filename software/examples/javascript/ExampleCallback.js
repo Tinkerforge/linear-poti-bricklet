@@ -27,7 +27,7 @@ ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
 lp.on(Tinkerforge.BrickletLinearPoti.CALLBACK_POSITION,
     // Callback function for position callback
     function (position) {
-        console.log('Position: ' + position); // Range: 0 to 100
+        console.log('Position: ' + position + ' %'); // Range: 0 to 100
     }
 );
 

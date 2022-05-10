@@ -17,7 +17,7 @@ class Example
 
 		// Get current position
 		int position = lp.GetPosition();
-		Console.WriteLine("Position: " + position); // Range: 0 to 100
+		Console.WriteLine("Position: " + position + " %"); // Range: 0 to 100
 
 		Console.WriteLine("Press enter to exit");
 		Console.ReadLine();

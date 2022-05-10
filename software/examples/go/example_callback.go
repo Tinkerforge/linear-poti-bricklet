@@ -19,7 +19,7 @@ func main() {
 	// Don't use device before ipcon is connected.
 
 	lp.RegisterPositionCallback(func(position uint16) {
-		fmt.Printf("Position: %d\n", position) // Range: 0 to 100
+		fmt.Printf("Position: %d %%\n", position) // Range: 0 to 100
 	})
 
 	// Set period for position receiver to 0.05s (50ms).

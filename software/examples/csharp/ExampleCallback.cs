@@ -10,7 +10,7 @@ class Example
 	// Callback function for position callback
 	static void PositionCB(BrickletLinearPoti sender, int position)
 	{
-		Console.WriteLine("Position: " + position); // Range: 0 to 100
+		Console.WriteLine("Position: " + position + " %"); // Range: 0 to 100
 	}
 
 	static void Main()

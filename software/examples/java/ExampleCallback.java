@@ -20,7 +20,7 @@ public class ExampleCallback {
 		// Add position listener
 		lp.addPositionListener(new BrickletLinearPoti.PositionListener() {
 			public void position(int position) {
-				System.out.println("Position: " + position); // Range: 0 to 100
+				System.out.println("Position: " + position + " %"); // Range: 0 to 100
 			}
 		});
 

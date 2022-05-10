@@ -18,7 +18,7 @@ ipcon.connect HOST, PORT # Connect to brickd
 
 # Register position callback
 lp.register_callback(BrickletLinearPoti::CALLBACK_POSITION) do |position|
-  puts "Position: #{position}" # Range: 0 to 100
+  puts "Position: #{position} %" # Range: 0 to 100
 end
 
 # Set period for position callback to 0.05s (50ms)

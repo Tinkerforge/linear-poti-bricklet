@@ -8,7 +8,7 @@ Module ExampleCallback
 
     ' Callback subroutine for position callback
     Sub PositionCB(ByVal sender As BrickletLinearPoti, ByVal position As Integer)
-        Console.WriteLine("Position: " + position.ToString()) ' Range: 0 to 100
+        Console.WriteLine("Position: " + position.ToString() + " %") ' Range: 0 to 100
     End Sub
 
     Sub Main()

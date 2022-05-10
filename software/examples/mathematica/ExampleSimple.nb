@@ -19,7 +19,7 @@ Notebook[{
    RowBox[{"
 "}],
    RowBox[{"(*", "Get current position", "*)"}],
-   RowBox[{RowBox[{"Print", "[", RowBox[{"\"\<Position: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"lp", "@", RowBox[{"GetPosition", "[", "]"}]}], "]"}]}], "]"}], RowBox[{"(*", "Range: 0 to 100", "*)"}]}],
+   RowBox[{RowBox[{"Print", "[", RowBox[{"\"\<Position: \>\"", "<>", RowBox[{"ToString", "[", RowBox[{"N", "[", RowBox[{"Quantity", "[", RowBox[{RowBox[{"lp", "@", RowBox[{"GetPosition", "[", "]"}]}], ",", "\"\<%\>\""}], "]"}], "]"}], "]"}]}], "]"}], RowBox[{"(*", "Range: 0 to 100", "*)"}]}],
    RowBox[{"
 "}],
    RowBox[{"(*", "Clean up", "*)"}],

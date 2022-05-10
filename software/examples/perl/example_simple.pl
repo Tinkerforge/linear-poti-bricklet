@@ -16,7 +16,7 @@ $ipcon->connect(&HOST, &PORT); # Connect to brickd
 
 # Get current position
 my $position = $lp->get_position();
-print "Position: $position\n"; # Range: 0 to 100
+print "Position: $position %\n"; # Range: 0 to 100
 
 print "Press key to exit\n";
 <STDIN>;

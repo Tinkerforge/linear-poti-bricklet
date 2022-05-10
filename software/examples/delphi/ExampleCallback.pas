@@ -27,7 +27,7 @@ var
 { Callback procedure for position callback }
 procedure TExample.PositionCB(sender: TBrickletLinearPoti; const position: word);
 begin
-  WriteLn(Format('Position: %d', [position])); { Range: 0 to 100 }
+  WriteLn(Format('Position: %d %%', [position])); { Range: 0 to 100 }
 end;
 
 procedure TExample.Execute;
